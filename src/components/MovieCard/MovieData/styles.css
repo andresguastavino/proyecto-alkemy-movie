@@ -1,0 +1,16 @@
+.movie-data {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-left: 25px;
+}
+
+.movie-data > h4 {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.movie-data > div {
+    padding-top: 15px;
+    line-height: 1.4;
+}
