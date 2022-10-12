@@ -1,0 +1,112 @@
+.select-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: var(--main-height-test);
+}
+
+.select-menu {
+    height: 2em;
+    padding: 0 15px;
+    border: none;
+    list-style: none;
+    white-space: nowrap ;
+}
+
+.first-element {
+    display: block;
+    border-bottom: 5px solid cyan;
+    height: var(--main-height-test);
+}
+
+.select-menu > span {
+    line-height: 25px;
+}
+
+.selected {
+    display: block;
+    border-bottom: 5px solid #23212f;
+    height: var(--main-height-test);
+}
+
+.select-menu > span > span {
+    font-size: 0.7em;
+    padding-left: 3px;
+}
+
+.select-menu__links{
+    display: none;
+    list-style: none;
+}
+
+.select-menu__links > ul {
+    list-style: none;
+}
+
+.select-menu__links > ul > li {
+    width: 150px;
+    padding: 10px 0 5px 25px;
+    z-index: 1005px;
+    position: relative;
+    
+}
+
+.links {
+    text-decoration: none;
+    color: black;
+}
+
+.first{
+    width: 200px;
+    height: 150px;
+    overflow: visible;
+    z-index: 10002;
+    top: 35;
+    left: 10;
+    box-sizing: content-box;
+    display: block;
+    position: fixed;
+    background: white;
+    border-radius: 3px;
+}
+
+.second {
+    width: 200px;
+    height: 150px;
+    overflow: visible;
+    z-index: 10002;
+    top: 35;
+    left: 100;
+    display: block;
+    position: fixed;
+    background: white;
+    border-radius: 3px;
+}
+
+.third {
+    width: 200px;
+    height: 150px;
+    overflow: visible;
+    z-index: 10002;
+    top: 35;
+    left: calc(45%);
+    box-sizing: content-box;
+    display: block;
+    position: fixed;
+    background: white;
+    border-radius: 3px;
+}
+
+.fourth{
+    width: 150px;
+    height: 150px;
+    overflow: visible;
+    z-index: 10002;
+    top: 35;
+    left: calc(60%);
+    box-sizing: content-box;
+    display: block;
+    position: fixed;
+    background: white;
+    border-radius: 3px;
+}
