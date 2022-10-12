@@ -1,0 +1,232 @@
+.movie-card {
+    background-color: rgba(31.5, 31.5, 10.5, 1);
+}
+
+.movie-image {
+    width: 100%;
+    min-width: 100%;
+    height: 150px;
+    background: url(https://www.themoviedb.org/t/p/w1000_and_h450_multi_faces/cD9PxbrdWYgL7MUpD9eOYuiSe2P.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: calc((((100vw / 2.222222) - 20px) / 1.5) / 2) 0;
+}
+
+.background-gradient {
+    position: absolute;
+    top: var(--main-height-test);
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to right, rgba(31.5, 31.5, 10.5, 1) 20%, rgba(31.5, 31.5, 10.5, 0) 50%);
+    z-index: 15;
+}
+
+.movie-image > img {
+    width: 80px;
+    height: 120px;
+    position: relative;
+    top: 15px;
+    left: 25px;
+    border-radius: 5px;
+    z-index: 150;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.movie-info > h1 {
+    font-size: 1.1em;
+    padding: 15px;
+    text-align: center;
+    font-size: 500;
+}
+
+
+.movie-info > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 50%;
+}
+
+.movie-info > div > img{
+    border-radius: 50%;
+    width: 30px;
+}
+
+.movie-info > div > p {
+    font-size: 1em;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.movie-rate {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    margin: 15px 0;
+    background-color: rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    color: white;
+}
+
+.movie-rate__duration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-age{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: lightgray;
+}
+
+.movie-rate__duration > p {
+    margin-left: 5px;
+}
+
+.movie-rate__duration > p > span::before {
+    content: '\2022';
+    font-size: 1em;
+    color: white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-right: 2px;
+}
+
+.movie-rate__category {
+    font-size: 1.1em;
+    margin-top: 3px;
+}
+
+.movie-description {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 1.3;
+}
+
+.movie-description__intro{
+    font-style: italic;
+    color: lightgray;
+    font-size: 1.1em;
+    padding-bottom: 10px;
+}
+
+.movie-description__title{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.movie-description__description{
+    padding-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.movie-description__author{
+    font-weight: bold;
+}
+
+.movie-description__creator{
+    padding-bottom: 10px;
+}
+
+.movie-carrousel {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.movie-carrousel > h2 {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.casting-link, 
+.all-seasons  {
+    font-weight: bold;
+    padding: 20px 0 20px 20px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+.actual-season {
+    padding: 20px 0 20px 20px;
+}
+
+.season-card {
+    margin: 0 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.season-card > div {
+    padding: 15px 0 15px 20px;
+    width: 90%;
+}
+
+.season-card > div > h5 {
+    font-size: 0.9em;
+    padding-top: 5px;
+}
+
+.season-card > div > p{
+    padding-top: 25px;
+    line-height: 1.3;
+}
+
+
+.social-networks {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    padding-left: 15px;
+    width: 60vw;
+}
+
+.social-networks > img {
+    width: 30px;
+    height: 30px;
+}
+
+.social-networks > img:nth-child(4) {
+    width: 20px;
+}
+
+.movie-tags {
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+
+.movie-tags > div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+}
+
+.movie-tags > div > p {
+    padding: 4px 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-top: 7px;
+}
