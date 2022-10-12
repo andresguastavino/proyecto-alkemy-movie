@@ -6,6 +6,7 @@ import { Login } from './components/views/Login/Login'
 import { Register } from './components/views/Register/Register'
 
 import './App.css'
+import Main from './components/main/Main'
 
 export const App = () => {
   return (
@@ -21,6 +22,7 @@ export const App = () => {
         />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/main' element={<Main/>} />
       </Routes>
     </AuthProvider>
   )
