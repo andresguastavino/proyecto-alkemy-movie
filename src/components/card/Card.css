@@ -1,0 +1,57 @@
+p{
+  font-size: 9px;
+  font-weight: bold;
+}
+
+article{
+ position: relative;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  transition: .2s ease-in-out 0s;
+}
+
+img:hover{
+  z-index: 1;
+  cursor: pointer;
+  transform: scaleX(1.05);
+  
+}
+
+
+
+
+article > button {
+background-color: rgba(2222, 2222, 2222, .5);
+width: 25px;
+position: absolute;
+top: 10px;
+right: 10px;
+border-radius: 50%;
+/* border: none; */
+font-size: 15px;
+cursor: pointer;
+
+}
+button{
+  transition: .2s ease-in-out 0s;
+}
+button:hover {
+transform: scale(1.2);
+}
+
+.wrapper-card {
+  /* background-color: blue; */
+  position: relative;
+}
+.wrapper-card > section{
+  position: absolute;
+  bottom: 0px;
+  /* right: 10px; */
+  left: 10px;
+  z-index: 222;
+}

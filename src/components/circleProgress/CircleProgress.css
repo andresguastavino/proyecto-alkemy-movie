@@ -1,0 +1,33 @@
+.radialProgressBar {
+  /* position: absolute; */
+  /* top:72%; */
+  /* left: .2rem; */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  background: #ddd;
+  float:left;
+}
+.radialProgressBar .overlay {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  background: #444;
+  text-align: center;
+  padding-top: 20%;
+  font-size: 13px;
+  font-weight:500;
+  color: #ddd
+}
+
+
+
+.radialProgressBar .overlay > span{
+  font-size: 10px;
+  font-weight: bold;  
+  color: #ddd;
+  
+  
+}
