@@ -1,3 +1,7 @@
+:root {
+  --main-height-test: 35px;
+}
+
 * {
   margin: 0;
   padding: 0;
