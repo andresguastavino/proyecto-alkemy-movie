@@ -30,9 +30,7 @@ export const MovieSelect = () => {
         </span>
         <div
           className={
-            selected.first
-              ? 'select-menu__links active first'
-              : 'select-menu__links'
+            selected.first ? 'select-menu__links first' : 'select-menu__links'
           }
         >
           <ul>
@@ -61,9 +59,7 @@ export const MovieSelect = () => {
         </span>
         <div
           className={
-            selected.second
-              ? 'select-menu__links active second'
-              : 'select-menu__links'
+            selected.second ? 'select-menu__links second' : 'select-menu__links'
           }
         >
           <ul>
@@ -92,9 +88,7 @@ export const MovieSelect = () => {
         </span>
         <div
           className={
-            selected.third
-              ? 'select-menu__links active third'
-              : 'select-menu__links'
+            selected.third ? 'select-menu__links third' : 'select-menu__links'
           }
         >
           <ul>
@@ -123,9 +117,7 @@ export const MovieSelect = () => {
         </span>
         <div
           className={
-            selected.fourth
-              ? 'select-menu__links active fourth'
-              : 'select-menu__links'
+            selected.fourth ? 'select-menu__links fourth' : 'select-menu__links'
           }
         >
           <ul>
