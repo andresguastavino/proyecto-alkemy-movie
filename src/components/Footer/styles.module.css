@@ -1,0 +1,22 @@
+.footerWrapper {
+  height: 5vh;
+  width: 100%;
+  background-color: var(--c-dark-blue);
+  color: var(--c-white);
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
