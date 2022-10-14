@@ -46,9 +46,7 @@ html {
 
 .wrapper-sub{
   /* margin:1rem 2rem; */
-  display: flex;
-  justify-content: start;
-  
+  display: flex start;  
 }
 
 .wrapper-btn{

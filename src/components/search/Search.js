@@ -1,40 +1,38 @@
-import './Search.css'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import debounce from 'lodash.debounce'
+import { useGetMoviesBySearchWordQuery } from '../../services/moviesData'
 
-const ENDPOINT = 'https://api.themoviedb.org/3/'
+import './Search.css'
 
 const Search = () => {
-  const [query, setQuery] = useState()
-  const [search, setSearch] = useState()
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  }
+  const [query, setQuery] = useState('')
 
-  useEffect(() => {
-    if (query) {
-      fetch(`${ENDPOINT}search/multi?api_key=0df9980ecbd4e5bed0ef64d4c4fb60b7&page=1&query=${query}`)
-        .then(res => res.json())
-        .then(da => {
-          setSearch(da.results)
-        })
-        .catch(err => console.log(err))
-    }
-  }, [query])
+  // Get the data from the store
+  const { data } = useGetMoviesBySearchWordQuery(query)
+  const moviesBySearchWord = data?.results
 
-  console.log(search)
+  console.log(moviesBySearchWord)
 
   const handleInput = debounce((e) => {
     if (e.target.value.length > 2) {
       setQuery(e.target.value)
     }
   }, 1000)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <div className='search'>
-    <form onSubmit={handleSubmit}>
-    <input type='text' className='text-form'
-    onChange={handleInput} name='sear' placeholder='Buscar....'/>
-    <input type='submit' value='Buscar'/>
+      <form onSubmit={handleSubmit}>
+        <input
+          type='text'
+          className='text-form'
+          onChange={handleInput}
+          name='sear'
+          placeholder='Buscar....'
+        />
+        <input type='submit' value='Buscar' />
       </form>
     </div>
   )
