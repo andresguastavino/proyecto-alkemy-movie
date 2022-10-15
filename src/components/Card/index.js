@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Modal from '../modal/Modal'
-import './Card.css'
-import CircleProgress from '../circleProgress/CircleProgress'
+import Modal from '../Modal'
+import styles from './styles.module.css'
+import CircleProgress from '../CircleProgress'
 
 const PATHIMG = 'https://image.tmdb.org/t/p/w500/'
 
@@ -53,7 +53,7 @@ const Card = (data) => {
   return (
     <>
     <article>
-      <div className='wrapper-card'>
+      <div className={styles.wrapperCard}>
        <CircleProgress vote={data.data.vote_average.toFixed(1) * 10}/>
       <img src={img} alt="" onClick={(e) => console.log(e.target)}/>
        {modal && <Modal fav={fav} />}

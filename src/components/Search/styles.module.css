@@ -15,7 +15,7 @@ form {
   background-color: #f2f2f2;
 }
 
-.text-form{
+.textForm{
   background-color: #f2f2f2;
   padding: 0.5rem;
   border-radius: 4rem;
@@ -23,14 +23,14 @@ form {
   border: none;
 
 }
-.text-form:hover{
+.textForm:hover{
   padding: 0.5rem;
   border-radius: 4rem;
   width: 100%;
   
 }
 
-.text-form:focus{
+.textForm:focus{
     border: none;
     outline: none;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);

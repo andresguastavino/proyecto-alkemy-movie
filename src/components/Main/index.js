@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import Card from '../card/Card'
-import Search from '../search/Search'
+import Card from '../Card'
+import Search from '../Search'
 import {
   useGetMoviesByFilterQuery,
   useGetMoviesByTrendQuery
 } from '../../services/moviesData'
 
-import './Main.css'
+import styles from './styles.module.css'
 
 const Main = () => {
   const [trendingFilter, setTrendingFilter] = useState('day')
@@ -20,17 +20,17 @@ const Main = () => {
 
   return (
     <>
-      <div className='container'>
+      <div className={styles.container}>
         <Search />
         <div>
-          <div className='wrapper-sub'>
+          <div className={styles.wrapperSub}>
             <h3>Lo más popular</h3>
-            <div className='wrapper-btn'>
+            <div className={styles.wrapperBtn}>
               <button
                 onClick={(e) => {
                   setPopularFilter('movie')
                 }}
-                className={popularFilter === 'movie' ? 'active' : ''}
+                className={popularFilter === 'movie' ? styles.active : ''}
               >
                 Movies
               </button>
@@ -38,28 +38,29 @@ const Main = () => {
                 onClick={(e) => {
                   setPopularFilter('tv')
                 }}
-                className={popularFilter === 'tv' ? 'active' : ''}
+                className={popularFilter === 'tv' ? styles.active : ''}
               >
                 Tv
               </button>
             </div>
           </div>
         </div>
-        <div className='container-card'>
+        <div className={styles.containerCard}>
           {moviesByFilter?.map((el, index) => (
             <Card key={el.id} data={el} />
           ))}
         </div>
       </div>
-      <div className='container'>
-        <div className='wrapper-sub'>
+      <div className={styles.container}>
+        <div className={styles.wrapperSub}>
           <h3>Tendencia</h3>
-          <div className='wrapper-btn'>
+          <div className={styles.wrapperBtn}>
             <button
               onClick={(e) => {
                 setTrendingFilter('day')
               }}
-              className={trendingFilter === 'day' ? 'active' : ''}
+              className={trendingFilter === 'day' ? styles.active : ''}
+
             >
               Hoy
             </button>
@@ -67,13 +68,13 @@ const Main = () => {
               onClick={(e) => {
                 setTrendingFilter('week')
               }}
-              className={trendingFilter === 'week' ? 'active' : ''}
+              className={trendingFilter === 'week' ? styles.active : ''}
             >
               Semana
             </button>
           </div>
         </div>
-        <div className='container-card'>
+        <div className={styles.containerCard}>
           {moviesByTrend?.map((el, index) => (
             <Card key={el.id} data={el} />
           ))}
