@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+}
+
+:root {
+  /* this test can be deleted? */
+  --main-height-test: 35px;
+  --max-width: 1300px;
+  --font-family: 'Montserrat', sans-serif;
+  --c-white: #fff;
+  --c-not-so-white: #ccc;
+  --c-dark-blue: #032541;
+  --c-light-blue: #344d6c;
+  --transition: ease 0.1s;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
