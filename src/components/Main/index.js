@@ -60,7 +60,6 @@ const Main = () => {
                 setTrendingFilter('day')
               }}
               className={trendingFilter === 'day' ? styles.active : ''}
-
             >
               Hoy
             </button>

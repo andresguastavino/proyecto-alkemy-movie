@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Modal from '../Modal'
-import styles from './styles.module.css'
 import CircleProgress from '../CircleProgress'
+import { Link } from 'react-router-dom'
+import styles from './styles.module.css'
 
 const PATHIMG = 'https://image.tmdb.org/t/p/w500/'
 
@@ -10,7 +11,6 @@ const Card = (data) => {
   const [fav, setFav] = useState('🖤')
   const [modal, setModal] = useState(false)
   const img = PATHIMG + data.data.poster_path
-
   const handleHeart = (e) => {
     fav !== '❤️' ? setFav('❤️') : setFav('🖤')
     setModal(true)
@@ -51,23 +51,19 @@ const Card = (data) => {
   }, [])
 
   return (
-    <>
-    <article>
-      <div className={styles.wrapperCard}>
-       <CircleProgress vote={data.data.vote_average.toFixed(1) * 10}/>
-      <img src={img} alt="" onClick={(e) => console.log(e.target)}/>
-       {modal && <Modal fav={fav} />}
-      </div>
-      <h5 onClick={(e) => console.log(e.target)}>{title || name }</h5>
-      {/* <Link to='/'>{title || name }</Link> */}
-       <p>{data.data.release_date || data.data.first_air_date}</p>
-      <button
-         onClick={ handleHeart }
-         >
-      {fav}
-</button>
-</article>
-            </>
+    <Link to={`/movie/${data.data.id}`} className={styles.cardLink}>
+      <article>
+        <div className={styles.wrapperCard}>
+          <CircleProgress vote={data.data.vote_average.toFixed(1) * 10} />
+          <img src={img} alt='' onClick={(e) => console.log(e.target)} />
+          {modal && <Modal fav={fav} />}
+        </div>
+        <h5 onClick={(e) => console.log(e.target)}>{title || name}</h5>
+        {/* <Link to='/'>{title || name }</Link> */}
+        <p>{data.data.release_date || data.data.first_air_date}</p>
+        <button onClick={handleHeart}>{fav}</button>
+      </article>
+    </Link>
   )
 }
 export default Card

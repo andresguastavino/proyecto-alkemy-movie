@@ -21,6 +21,10 @@ export const moviesApi = createApi({
     getMoviesBySearchWord: builder.query({
       query: (searchWord) =>
         `search/multi?api_key=${API_KEY}&page=1&query=${searchWord}`
+    }),
+    getMovieById: builder.query({
+      query: (id) =>
+        `${ENDPOINT}movie/${id}?api_key=${API_KEY}&language=en-US&append_to_response=release_dates,credits,external_ids,keywords`
     })
   })
 })
@@ -30,5 +34,6 @@ export const moviesApi = createApi({
 export const {
   useGetMoviesByFilterQuery,
   useGetMoviesByTrendQuery,
-  useGetMoviesBySearchWordQuery
+  useGetMoviesBySearchWordQuery,
+  useGetMovieByIdQuery
 } = moviesApi

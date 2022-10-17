@@ -3,21 +3,16 @@ import logo from '../../img/vhs-big.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 
-const links = [
-  'Movies',
-  'TV Shows',
-  'People',
-  'More'
-]
+const links = ['Movies', 'TV Shows', 'People', 'More']
 
-export default function Navbar () {
+export const Navbar = () => {
   return (
     <div className={styles.navWrapper}>
       <nav className={styles.nav}>
         <header className={styles.header}>
           <div className={styles.logoBox}>
             <img className={styles.logoImg} src={logo} alt='logo' />
-            <h1>Movies</h1>
+            <h1 className={styles.logoTitle}>Movies</h1>
           </div>
           <ul className={styles.ulLinks}>
             {links.map((link, i) => (
