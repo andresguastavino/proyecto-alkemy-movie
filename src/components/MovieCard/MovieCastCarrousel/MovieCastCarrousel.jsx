@@ -2,45 +2,24 @@ import React from 'react'
 
 import './styles.css'
 
-export const MovieCastCarrousel = () => {
+export const MovieCastCarrousel = ({ data }) => {
   return (
     <div className='carrousel'>
-      <article>
-        <img src='https://www.themoviedb.org/t/p/w240_and_h266_face/dQTXg59BAmEH6iUHQ3XUjg7drtd.jpg'></img>
-        <h3>Mariska Hargitay</h3>
-        <p>Olivia Benson</p>
-        <p>524 episodios</p>
-      </article>
-      <article>
-        <img src='https://www.themoviedb.org/t/p/w240_and_h266_face/dQTXg59BAmEH6iUHQ3XUjg7drtd.jpg'></img>
-        <h3>Mariska Hargitay</h3>
-        <p>Olivia Benson</p>
-        <p>524 episodios</p>
-      </article>
-      <article>
-        <img src='https://www.themoviedb.org/t/p/w240_and_h266_face/dQTXg59BAmEH6iUHQ3XUjg7drtd.jpg'></img>
-        <h3>Mariska Hargitay</h3>
-        <p>Olivia Benson</p>
-        <p>524 episodios</p>
-      </article>
-      <article>
-        <img src='https://www.themoviedb.org/t/p/w240_and_h266_face/dQTXg59BAmEH6iUHQ3XUjg7drtd.jpg'></img>
-        <h3>Mariska Hargitay</h3>
-        <p>Olivia Benson</p>
-        <p>524 episodios</p>
-      </article>
-      <article>
-        <img src='https://www.themoviedb.org/t/p/w240_and_h266_face/dQTXg59BAmEH6iUHQ3XUjg7drtd.jpg'></img>
-        <h3>Mariska Hargitay</h3>
-        <p>Olivia Benson</p>
-        <p>524 episodios</p>
-      </article>
-      <article>
-        <img src='https://www.themoviedb.org/t/p/w240_and_h266_face/dQTXg59BAmEH6iUHQ3XUjg7drtd.jpg'></img>
-        <h3>Mariska Hargitay</h3>
-        <p>Olivia Benson</p>
-        <p>524 episodios</p>
-      </article>
+      {data?.credits?.cast?.map((actor, i) => {
+        return (
+          <article key={i}>
+            <img
+              src={
+                actor.profile_path !== null
+                  ? `https://image.tmdb.org/t/p/original/${actor.profile_path}`
+                  : 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
+              }
+            ></img>
+            <h3>{actor?.original_name}</h3>
+            <p>{actor?.character}</p>
+          </article>
+        )
+      })}
     </div>
   )
 }

@@ -36,6 +36,11 @@
   width: 100px;
 }
 
+.logoTitle,
+.bars {
+  padding-bottom: 10px;
+}
+
 .bars {
   font-size: 40px;
   margin-right: 15px;

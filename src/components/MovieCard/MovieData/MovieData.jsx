@@ -2,29 +2,25 @@ import React from 'react'
 
 import './styles.css'
 
-export const MovieData = () => {
+export const MovieData = ({ data }) => {
   return (
     <div className='movie-data'>
-      <h4>Datos</h4>
+      <h4>Data</h4>
       <div>
-        <h4>Nombre original</h4>
-        <p>Law & Order: Special Victims Unit</p>
+        <h4>Original name</h4>
+        <p>{data?.title}</p>
       </div>
       <div>
-        <h4>Estado</h4>
-        <p>Volverá a emitirse</p>
+        <h4>Status</h4>
+        <p>{data?.status}</p>
       </div>
       <div>
-        <h4>Canal</h4>
-        <p>NBC</p>
-      </div>
-      <div>
-        <h4>Tipo</h4>
-        <p>Con guion</p>
-      </div>
-      <div>
-        <h4>Idioma original</h4>
-        <p>Inglés</p>
+        <h4>Original language</h4>
+        <p>
+          {data?.original_language === 'en'
+            ? `${data?.original_language + 'glish'}`
+            : `${data?.original_language + 'panese'}`}
+        </p>
       </div>
     </div>
   )
