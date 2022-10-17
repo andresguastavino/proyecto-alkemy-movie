@@ -8,7 +8,7 @@ import Layout from './components/Layout'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './styles.css'
-import Main from './components/main/Main'
+import Main from './components/Main'
 
 export const App = () => {
   return (

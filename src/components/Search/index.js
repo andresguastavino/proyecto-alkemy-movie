@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import debounce from 'lodash.debounce'
 import { useGetMoviesBySearchWordQuery } from '../../services/moviesData'
-
-import './Search.css'
+import styles from './styles.module.css'
 
 const Search = () => {
   const [query, setQuery] = useState('')
@@ -23,11 +22,11 @@ const Search = () => {
     e.preventDefault()
   }
   return (
-    <div className='search'>
+    <div className={styles.search}>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
-          className='text-form'
+          className={styles.textForm}
           onChange={handleInput}
           name='sear'
           placeholder='Buscar....'

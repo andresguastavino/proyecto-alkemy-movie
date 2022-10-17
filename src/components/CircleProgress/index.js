@@ -1,5 +1,5 @@
 import React from 'react'
-import './CircleProgress.css'
+import styles from './styles.module.css'
 // eslint-disable-next-line react/prop-types
 const CircleProgress = ({ vote }) => {
   const color = (vot) => {
@@ -42,8 +42,8 @@ const CircleProgress = ({ vote }) => {
 
   return (
     <section>
-        <div className="radialProgressBar" style={ sty1 }>
-          <div className="overlay">{vote}<span>%</span></div>
+        <div className={styles.radialProgressBar} style={ sty1 }>
+          <div className={styles.overlay}>{vote}<span>%</span></div>
           </div>
 </section>
   )
