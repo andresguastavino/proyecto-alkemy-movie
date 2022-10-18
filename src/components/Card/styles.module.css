@@ -4,7 +4,8 @@ p{
 }
 
 article{
- position: relative;
+  position: relative;
+  max-height: 45vh;
 }
 
 .cardLink{
@@ -14,8 +15,7 @@ article{
 
 img{
   width: 100%;
-  height: auto;
-  border-radius: 1rem;
+  max-height: 250px;
   margin-bottom: 1rem;
   transition: .2s ease-in-out 0s;
 }
@@ -53,4 +53,13 @@ transform: scale(1.2);
   bottom: 0px;
   left: 10px;
   z-index: 222;
+}
+
+.cardLink > h5 {
+  text-align: center;
+}
+
+.cardLink > p {
+  text-align: center;
+  margin-top: 5px;
 }

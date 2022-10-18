@@ -38,15 +38,6 @@ export const Register = () => {
       required: '* Campo obligatorio',
       min: 'Debes ser mayor de edad para poder registrarte',
       max: 'Debes estar vivo para poder registrarte'
-    },
-    role: {
-      required: '* Campo obligatorio'
-    },
-    continent: {
-      required: '* Campo obligatorio'
-    },
-    region: {
-      required: '* Campo obligatorio'
     }
   }
 
@@ -71,10 +62,7 @@ export const Register = () => {
       .positive()
       .integer()
       .min(18, validationErrors.age.min)
-      .max(99, validationErrors.age.max),
-    role: yup.string().required(validationErrors.role.required),
-    continent: yup.string().required(validationErrors.continent.required),
-    region: yup.string().required(validationErrors.region.required)
+      .max(99, validationErrors.age.max)
   })
 
   const onSubmit = () => {
@@ -91,16 +79,12 @@ export const Register = () => {
       onSubmit
     })
 
-  const roles = ['Team Member', 'Team Leader']
-  const continents = ['America', 'Europa', 'Otro']
-  const regions = ['Latam', 'Brasil', 'America del Norte', 'Otro']
-
   return (
     <>
       <section className='register-screen'>
         <h1 className='register-screen__title'>Crear una cuenta</h1>
         <h3 className='register-screen__subtitle'>
-          ¡Podrás crear y organizar mejor tus tareas!
+          ¡Podrás ver todas las series y peliculas que quieras!
         </h3>
         <form onSubmit={handleSubmit} className='register-form'>
           <div>
@@ -155,51 +139,6 @@ export const Register = () => {
               className={errors.age && touched.age ? 'error' : ''}
             />
             {errors.age && touched.age && <div>{errors.age}</div>}
-          </div>
-          <div>
-            <select name='role' onChange={handleChange} onBlur={handleBlur}>
-              <option value=''>Selecciona un rol</option>
-              {roles?.map((role, index) => {
-                return (
-                  <option key={index} value={role}>
-                    {role}
-                  </option>
-                )
-              })}
-            </select>
-            {errors.role && touched.role && <div>{errors.role}</div>}
-          </div>
-          <div>
-            <select
-              name='continent'
-              onChange={handleChange}
-              onBlur={handleBlur}
-            >
-              <option value=''>Selecciona un continente</option>
-              {continents?.map((continent, index) => {
-                return (
-                  <option key={index} value={continent}>
-                    {continent}
-                  </option>
-                )
-              })}
-            </select>
-            {errors.continent && touched.continent && (
-              <div>{errors.continent}</div>
-            )}
-          </div>
-          <div>
-            <select name='region' onChange={handleChange} onBlur={handleBlur}>
-              <option value=''>Selecciona una region</option>
-              {regions?.map((region, index) => {
-                return (
-                  <option key={index} value={region}>
-                    {region}
-                  </option>
-                )
-              })}
-            </select>
-            {errors.region && touched.region && <div>{errors.region}</div>}
           </div>
           <button type='submit'>Crear cuenta</button>
         </form>

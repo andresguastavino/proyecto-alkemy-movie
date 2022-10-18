@@ -51,19 +51,19 @@ const Card = (data) => {
   }, [])
 
   return (
-    <Link to={`/movie/${data.data.id}`} className={styles.cardLink}>
-      <article>
-        <div className={styles.wrapperCard}>
-          <CircleProgress vote={data.data.vote_average.toFixed(1) * 10} />
+    <article className={styles.cardLink}>
+      <div className={styles.wrapperCard}>
+        <CircleProgress vote={data.data.vote_average.toFixed(1) * 10} />
+        <Link to={`/movie/${data.data.id}`}>
           <img src={img} alt='' onClick={(e) => console.log(e.target)} />
           {modal && <Modal fav={fav} />}
-        </div>
-        <h5 onClick={(e) => console.log(e.target)}>{title || name}</h5>
-        {/* <Link to='/'>{title || name }</Link> */}
-        <p>{data.data.release_date || data.data.first_air_date}</p>
-        <button onClick={handleHeart}>{fav}</button>
-      </article>
-    </Link>
+        </Link>
+      </div>
+      <h5 onClick={(e) => console.log(e.target)}>{title || name}</h5>
+      {/* <Link to='/'>{title || name }</Link> */}
+      <p>{data.data.release_date || data.data.first_air_date}</p>
+      <button onClick={handleHeart}>{fav}</button>
+    </article>
   )
 }
 export default Card

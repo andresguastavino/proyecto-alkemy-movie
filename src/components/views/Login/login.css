@@ -6,6 +6,7 @@
     align-items: center;
     height: 75vh;
     padding: 0 25px;
+    margin-top: 10vh;
 }
 
 .login-screen__title {
@@ -19,6 +20,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    background: none;
 }
 
 .login-form > div {

@@ -17,9 +17,12 @@ export const MovieData = ({ data }) => {
       <div>
         <h4>Original language</h4>
         <p>
-          {data?.original_language === 'en'
-            ? `${data?.original_language + 'glish'}`
-            : `${data?.original_language + 'panese'}`}
+          {data?.original_language === 'en' &&
+            `${data?.original_language + 'glish'}`}
+          {data?.original_language === 'ja' &&
+            `${data?.original_language + 'panese'}`}
+          {data?.original_language === 'es' &&
+            `${data?.original_language + 'pañol'}`}
         </p>
       </div>
     </div>

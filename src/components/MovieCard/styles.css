@@ -1,3 +1,7 @@
+.wrapper-movie-card {
+    margin-top: 9vh;
+}
+
 .movie-card {
     background-color: rgba(31.5, 31.5, 10.5, 1);
 }
@@ -13,11 +17,11 @@
 
 .background-gradient {
     position: absolute;
-    top: 16vh;
+    top: 14%;
     left: 0;
     width: 100%;
     min-width: 100%;
-    height: 150px;
+    height: 160px;
     background-image: linear-gradient(to right, rgba(31.5, 31.5, 10.5, 1) 20%, rgba(31.5, 31.5, 10.5, 0) 50%);
     z-index: 15;
 }
@@ -29,7 +33,7 @@
     top: 15px;
     left: 25px;
     border-radius: 5px;
-    z-index: 150;
+    z-index: 50;
 }
 
 .movie-info {
@@ -149,12 +153,17 @@
     display: flex;
     flex-direction: column;
     padding-top: 20px;
+    
 }
 
 .movie-carrousel > h2 {
     font-size: 1.2em;
     padding-bottom: 20px;
     padding-left: 20px;
+}
+
+.casting-link {
+    margin-top: 25px;
 }
 
 .casting-link, 
@@ -195,15 +204,16 @@
 
 .social-networks {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 15px;
     padding-left: 15px;
-    width: 60vw;
+    width: 40vw;
 }
 
-.social-networks > img {
-    width: 30px;
-    height: 30px;
+.social-networks > a > img {
+    width: 50px;
+    height: auto;
+    margin-left: 25px;
 }
 
 .social-networks > img:nth-child(4) {

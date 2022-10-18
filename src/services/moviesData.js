@@ -22,6 +22,7 @@ export const moviesApi = createApi({
       query: (searchWord) =>
         `search/multi?api_key=${API_KEY}&page=1&query=${searchWord}`
     }),
+    // Paso 1 Create the endpoint using queries
     getMovieById: builder.query({
       query: (id) =>
         `${ENDPOINT}movie/${id}?api_key=${API_KEY}&language=en-US&append_to_response=release_dates,credits,external_ids,keywords`
@@ -31,6 +32,7 @@ export const moviesApi = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
+// Paso 2 export the custom hook adding the query word in the end
 export const {
   useGetMoviesByFilterQuery,
   useGetMoviesByTrendQuery,
