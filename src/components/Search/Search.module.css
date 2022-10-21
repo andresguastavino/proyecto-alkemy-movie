@@ -2,16 +2,15 @@
   display: flex;
   width: 100%;
   margin-bottom: .7rem;
+  justify-content: center;
 }
 
-form {
+.search > form {
   border-radius: 4rem;
-  /* border: 1px solid #222; */
-  /* padding-left:1r}em; */
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
-  width: 100%;
+  margin-top: 1rem;
+  width: 80%;
   background-color: #f2f2f2;
 }
 
@@ -36,7 +35,7 @@ form {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
 }
 
-form > input:nth-child(2) {
+.search > form > input:nth-child(2) {
   padding: 0.5rem;
   border-radius: 4rem;
   border: none;
@@ -45,16 +44,16 @@ form > input:nth-child(2) {
   margin: 0;
   cursor: pointer;
 }
-input[type="submit"] {
-   /* transition: .2s ease-in-out 0s; */
-   color: red;
+.search >form >  input[type="text"] {
+   padding-left: 2rem;
+
 }
-input[type="submit"]:hover {
+.search >form > input[type="submit"]:hover {
 transform: scale(1.1);
 }
 
 @media screen and ( min-width:720px){
-  form{
+  .search > form {
     width: 50%;
     /* justify-content: center; */
   }

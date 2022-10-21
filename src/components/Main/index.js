@@ -6,7 +6,7 @@ import {
   useGetMoviesByTrendQuery
 } from '../../services/moviesData'
 
-import styles from './styles.module.css'
+import styles from './Main.module.css'
 
 const Main = () => {
   const [trendingFilter, setTrendingFilter] = useState('day')

@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './styles.css'
 import Main from './components/Main'
+import SearchResults from './components/SearchResults'
 
 export const App = () => {
   return (
@@ -27,6 +28,7 @@ export const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/main' element={<Main/>} />
+          <Route path='/search/:query' element={<SearchResults/>} />
         </Routes>
       </Layout>
       <Footer />

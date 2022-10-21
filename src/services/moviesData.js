@@ -19,8 +19,12 @@ export const moviesApi = createApi({
       query: (popularTrend) => `trending/all/${popularTrend}?api_key=${API_KEY}`
     }),
     getMoviesBySearchWord: builder.query({
-      query: (searchWord) =>
-        `search/multi?api_key=${API_KEY}&page=1&query=${searchWord}`
+      query: ({ searchWord, page }) =>
+        `search/movie?api_key=${API_KEY}&page=${page}&query=${searchWord}`
+    }),
+    getTvBySearchWord: builder.query({
+      query: ({ searchWord, page }) =>
+        `search/tv?api_key=${API_KEY}&page=${page}&query=${searchWord}`
     })
   })
 })
@@ -30,5 +34,6 @@ export const moviesApi = createApi({
 export const {
   useGetMoviesByFilterQuery,
   useGetMoviesByTrendQuery,
-  useGetMoviesBySearchWordQuery
+  useGetMoviesBySearchWordQuery,
+  useGetTvBySearchWordQuery
 } = moviesApi
